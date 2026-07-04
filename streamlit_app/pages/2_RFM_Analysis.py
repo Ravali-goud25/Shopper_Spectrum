@@ -1,6 +1,7 @@
 import streamlit as st
 import pandas as pd
 import plotly.express as px
+from utils.data_loader import DATA_DIR
 
 st.set_page_config(
     page_title="RFM Analysis",
@@ -11,7 +12,9 @@ st.set_page_config(
 # LOAD DATA
 # ==================================
 
-rfm = pd.read_csv("../data/customer_segments.csv")
+rfm = pd.read_csv(
+    DATA_DIR / "customer_segments.csv"
+)
 
 # ==================================
 # PAGE TITLE

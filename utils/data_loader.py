@@ -1,16 +1,7 @@
-import pandas as pd
+from pathlib import Path
 
-def load_segments():
-    return pd.read_csv(
-        "../data/customer_segments.csv"
-    )
+BASE_DIR = Path(__file__).resolve().parent.parent
 
-def load_cluster_profile():
-    return pd.read_csv(
-        "../data/cluster_profile.csv"
-    )
+DATA_DIR = BASE_DIR / "data"
 
-def load_top_products():
-    return pd.read_csv(
-        "../data/top_products.csv"
-    )
+MODELS_DIR = BASE_DIR / "models"

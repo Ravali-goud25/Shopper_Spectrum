@@ -1,6 +1,7 @@
 import streamlit as st
 import pandas as pd
 import plotly.express as px
+from utils.data_loader import DATA_DIR
 
 st.set_page_config(
     page_title="EDA",
@@ -12,8 +13,8 @@ st.title("📊 Exploratory Data Analysis")
 @st.cache_data
 def load_data():
     df = pd.read_csv(
-        "../data/cleaned_online_retail.csv"
-    )
+    DATA_DIR / "cleaned_online_retail.csv"
+)
 
     df["InvoiceDate"] = pd.to_datetime(
         df["InvoiceDate"]

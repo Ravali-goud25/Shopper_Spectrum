@@ -1,6 +1,7 @@
 import streamlit as st
 import pandas as pd
 import plotly.express as px
+from utils.data_loader import DATA_DIR
 
 st.set_page_config(
     page_title="Customer Segmentation",
@@ -12,7 +13,7 @@ st.set_page_config(
 # ===================================
 
 segments = pd.read_csv(
-    "../data/customer_segments.csv"
+    DATA_DIR / "customer_segments.csv"
 )
 
 # Create profile dynamically

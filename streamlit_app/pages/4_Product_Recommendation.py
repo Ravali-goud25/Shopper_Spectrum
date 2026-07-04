@@ -2,6 +2,8 @@ import streamlit as st
 import pandas as pd
 import plotly.express as px
 import joblib
+from utils.data_loader import DATA_DIR
+from utils.data_loader import MODELS_DIR
 
 # =====================================================
 # PAGE CONFIG
@@ -17,23 +19,18 @@ st.set_page_config(
 # =====================================================
 
 similarity_df = joblib.load(
-    "../models/similarity_matrix.pkl"
+    MODELS_DIR / "similarity_matrix.pkl"
 )
 
-top_products = pd.read_csv(
-    "../data/top_products.csv"
+top_products = pd.read_csv(DATA_DIR / "top_products.csv")
+
+customer_products = pd.read_csv(DATA_DIR /"customer_products.csv"
 )
 
-customer_products = pd.read_csv(
-    "../data/customer_products.csv"
+segment_products = pd.read_csv(DATA_DIR /"segment_recommendations.csv"
 )
 
-segment_products = pd.read_csv(
-    "../data/segment_recommendations.csv"
-)
-
-country_products = pd.read_csv(
-    "../data/country_recommendations.csv"
+country_products = pd.read_csv(DATA_DIR /"country_recommendations.csv"
 )
 
 # =====================================================

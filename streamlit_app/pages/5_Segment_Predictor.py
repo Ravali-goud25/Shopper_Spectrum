@@ -3,6 +3,8 @@ import pandas as pd
 import numpy as np
 import joblib
 import plotly.graph_objects as go
+from utils.data_loader import MODELS_DIR
+from utils.data_loader import DATA_DIR
 
 # ==================================================
 # PAGE CONFIG
@@ -18,15 +20,15 @@ st.set_page_config(
 # ==================================================
 
 kmeans = joblib.load(
-    "../models/kmeans_model.pkl"
+    MODELS_DIR / "kmeans_model.pkl"
 )
 
 scaler = joblib.load(
-    "../models/scaler.pkl"
+    MODELS_DIR / "scaler.pkl"
 )
 
 segments_df = pd.read_csv(
-    "../data/customer_segments.csv"
+    DATA_DIR/"customer_segments.csv"
 )
 
 # ==================================================
