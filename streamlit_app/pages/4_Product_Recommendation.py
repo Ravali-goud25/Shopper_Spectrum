@@ -2,8 +2,13 @@ import streamlit as st
 import pandas as pd
 import plotly.express as px
 import joblib
-from streamlit_app.utils.data_loader import DATA_DIR
-from streamlit_app.utils.data_loader import MODELS_DIR
+from pathlib import Path
+
+BASE_DIR = Path(__file__).resolve().parent.parent.parent
+
+DATA_DIR = BASE_DIR / "data"
+
+MODELS_DIR = BASE_DIR / "models"
 
 # =====================================================
 # PAGE CONFIG

@@ -1,8 +1,13 @@
 import streamlit as st
 import pandas as pd
 import plotly.express as px
-from streamlit_app.utils.data_loader import DATA_DIR
+from pathlib import Path
 
+BASE_DIR = Path(__file__).resolve().parent.parent.parent
+
+DATA_DIR = BASE_DIR / "data"
+
+MODELS_DIR = BASE_DIR / "models"
 st.set_page_config(
     page_title="Customer Segmentation",
     layout="wide"

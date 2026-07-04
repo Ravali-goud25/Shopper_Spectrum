@@ -3,8 +3,13 @@ import pandas as pd
 import numpy as np
 import joblib
 import plotly.graph_objects as go
-from streamlit_app.utils.data_loader import MODELS_DIR
-from streamlit_app.utils.data_loader import DATA_DIR
+from pathlib import Path
+
+BASE_DIR = Path(__file__).resolve().parent.parent.parent
+
+DATA_DIR = BASE_DIR / "data"
+
+MODELS_DIR = BASE_DIR / "models"
 
 # ==================================================
 # PAGE CONFIG
