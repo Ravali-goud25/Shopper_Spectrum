@@ -1,6 +1,6 @@
 import streamlit as st
 import pandas as pd
-from utils.data_loader import DATA_DIR
+from streamlit_app.utils.data_loader import DATA_DIR
 
 
 st.set_page_config(

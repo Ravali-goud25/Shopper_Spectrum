@@ -2,8 +2,8 @@ import streamlit as st
 import pandas as pd
 import plotly.express as px
 import joblib
-from utils.data_loader import DATA_DIR
-from utils.data_loader import MODELS_DIR
+from streamlit_app.utils.data_loader import DATA_DIR
+from streamlit_app.utils.data_loader import MODELS_DIR
 
 # =====================================================
 # PAGE CONFIG
